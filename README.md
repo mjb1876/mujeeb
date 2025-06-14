@@ -1,5 +1,3 @@
-# mujeeb
-testing
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +5,10 @@ testing
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Web Page</title>
     <style>
-
-
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
-		line-height: 1.6;
-            margin: 0;
+            line-height: 1.6;
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
@@ -30,7 +25,25 @@ testing
             margin-right: 15px;
             text-decoration: none;
         }
-
+        .scrolling-text {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .scrolling-text span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 15s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -60,10 +73,10 @@ testing
                 <li>Lists (ul, ol, li)</li>
             </ul>
         </section>
-<marquee behavior="scroll" direction="left" scrollamount="5">
-  This is a basic scrolling text - MUJEEB: The marquee tag is obsolete in HTML5
-</marquee>
 
+        <div class="scrolling-text">
+            <span>This is a basic scrolling text - MUJEEB: The marquee tag is obsolete in HTML5</span>
+        </div>
     </main>
 
     <footer>
